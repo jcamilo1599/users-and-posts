@@ -10,4 +10,6 @@ La aplicación obtiene una lista de usuarios y sus publicaciones desde el api `h
 - Utilice el patrón MVVM.
 - El "property list" donde se configura la ruta para los servicios esta en `Users/Models/Resources/Config.plist`
 
-![Image](image.gif)
+## Demostración
+
+![Image](image-demo.gif)
