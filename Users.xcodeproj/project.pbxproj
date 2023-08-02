@@ -34,6 +34,7 @@
 		0D04D8E02A7A3ECB00E998C6 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8DF2A7A3ECB00E998C6 /* PostsView.swift */; };
 		0D04D8E22A7A3F3C00E998C6 /* NoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8E12A7A3F3C00E998C6 /* NoInfoView.swift */; };
 		0D04D8E42A7AED0000E998C6 /* CardPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8E32A7AED0000E998C6 /* CardPostView.swift */; };
+		0D9949632A7AFB7600C81762 /* UsersExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9949622A7AFB7600C81762 /* UsersExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		0D04D8DF2A7A3ECB00E998C6 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		0D04D8E12A7A3F3C00E998C6 /* NoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfoView.swift; sourceTree = "<group>"; };
 		0D04D8E32A7AED0000E998C6 /* CardPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPostView.swift; sourceTree = "<group>"; };
+		0D9949622A7AFB7600C81762 /* UsersExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				0D04D8CB2A7A10FA00E998C6 /* ConfigError.swift */,
 				0D04D8D92A7A275100E998C6 /* ColorExt.swift */,
 				0D04D8DD2A7A360B00E998C6 /* LoadingModifier.swift */,
+				0D9949622A7AFB7600C81762 /* UsersExt.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				0D04D8BC2A79FFE200E998C6 /* UsersAPI.swift in Sources */,
 				0D04D8B62A79FDB400E998C6 /* UsersAPIService.swift in Sources */,
 				0D04D8BF2A7A075800E998C6 /* UserModel.swift in Sources */,
+				0D9949632A7AFB7600C81762 /* UsersExt.swift in Sources */,
 				0D04D8972A79F59400E998C6 /* UsersApp.swift in Sources */,
 				0D04D8DE2A7A360B00E998C6 /* LoadingModifier.swift in Sources */,
 				0D04D8E02A7A3ECB00E998C6 /* PostsView.swift in Sources */,

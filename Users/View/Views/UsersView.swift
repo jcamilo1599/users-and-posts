@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct UsersView: View {
+    @Environment(\.managedObjectContext) var context
+    
     @ObservedObject private var viewModel = UsersViewModel()
+    @FetchRequest(entity: Users.entity(), sortDescriptors: [], animation: .spring()) var results: FetchedResults<Users>
     
     // Filtro de busqueda
     @State private var searchText = ""
@@ -29,7 +32,11 @@ struct UsersView: View {
         }
         .modifier(LoadingModifier(show: $viewModel.loading))
         .navigationViewStyle(DoubleColumnNavigationViewStyle())
-        .onAppear() { viewModel.getUsers() }
+        .onAppear() {
+            viewModel.users = results.map { $0.toUserModel() }
+            viewModel.filteredUsers = viewModel.users
+            viewModel.getUsers(context)
+        }
     }
     
     @ViewBuilder
@@ -42,9 +49,7 @@ struct UsersView: View {
     }
     
     private func buildFilteredUsers() -> some View {
-        ForEach(viewModel.filteredUsers, id: \.id) { user in
-            CardUserView(user: user)
-        }
+        ForEach(viewModel.filteredUsers, id: \.id) { CardUserView(user: $0) }
     }
 }
 

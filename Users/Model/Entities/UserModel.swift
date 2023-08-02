@@ -8,6 +8,6 @@
 import Foundation
 
 struct UserModel: Codable, Hashable {
-    let id: Int
+    let id: Int32
     let name, email, phone: String
 }

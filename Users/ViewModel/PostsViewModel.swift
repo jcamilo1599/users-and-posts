@@ -15,7 +15,7 @@ class PostsViewModel: ObservableObject {
     
     init(
         postsNetwork: PostsAPI = PostsAPIService(userId: nil),
-        userId: Int?
+        userId: Int32?
     ) {
         if userId != nil {
             self.postsNetwork = PostsAPIService(userId: userId)
@@ -36,6 +36,7 @@ class PostsViewModel: ObservableObject {
         }
     }
     
+    // Muestra u oculta la animación de cargando
     private func toggleLoading(){
         let seconds = DispatchTimeInterval.seconds(1)
         

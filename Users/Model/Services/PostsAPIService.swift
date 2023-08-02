@@ -12,9 +12,9 @@ class PostsAPIService: PostsAPI {
     private let path = "/posts"
     private let key = "BASE_URL"
     
-    var userId: Int?
+    var userId: Int32?
     
-    init(userId: Int?) {
+    init(userId: Int32?) {
         self.userId = userId
     }
     
