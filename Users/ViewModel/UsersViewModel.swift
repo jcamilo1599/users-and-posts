@@ -10,7 +10,7 @@ import Foundation
 class UsersViewModel: ObservableObject {
     @Published var users: [UserModel] = []
     @Published var filteredUsers: [UserModel] = []
-    @Published var showLoading = false
+    @Published var loading = false
     
     private let usersNetwork: UsersAPI
     
@@ -19,16 +19,16 @@ class UsersViewModel: ObservableObject {
     }
     
     func getUsers() {
-        showLoading = true
+        loading = true
         users = []
         filteredUsers = []
         
         usersNetwork.getUsers { response in
-            self.loading()
+            self.toggleLoading()
             self.users.append(contentsOf: response)
             self.filteredUsers.append(contentsOf: response)
         } failure: { error in
-            self.loading()
+            self.toggleLoading()
         }
     }
     
@@ -42,11 +42,11 @@ class UsersViewModel: ObservableObject {
         }
     }
     
-    private func loading(){
-        let seconds = DispatchTimeInterval.seconds(2)
+    private func toggleLoading(){
+        let seconds = DispatchTimeInterval.seconds(1)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            self.showLoading.toggle()
+            self.loading.toggle()
         }
     }
 }

@@ -27,6 +27,10 @@
 		0D04D8CC2A7A10FA00E998C6 /* ConfigError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8CB2A7A10FA00E998C6 /* ConfigError.swift */; };
 		0D04D8CE2A7A169F00E998C6 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8CD2A7A169F00E998C6 /* UsersViewModel.swift */; };
 		0D04D8D02A7A16B500E998C6 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8CF2A7A16B500E998C6 /* PostsViewModel.swift */; };
+		0D04D8D42A7A234100E998C6 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8D32A7A234100E998C6 /* UsersView.swift */; };
+		0D04D8D82A7A24D600E998C6 /* CardUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8D72A7A24D600E998C6 /* CardUserView.swift */; };
+		0D04D8DA2A7A275100E998C6 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8D92A7A275100E998C6 /* ColorExt.swift */; };
+		0D04D8DE2A7A360B00E998C6 /* LoadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8DD2A7A360B00E998C6 /* LoadingModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		0D04D8CB2A7A10FA00E998C6 /* ConfigError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigError.swift; sourceTree = "<group>"; };
 		0D04D8CD2A7A169F00E998C6 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		0D04D8CF2A7A16B500E998C6 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		0D04D8D32A7A234100E998C6 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		0D04D8D72A7A24D600E998C6 /* CardUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUserView.swift; sourceTree = "<group>"; };
+		0D04D8D92A7A275100E998C6 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		0D04D8DD2A7A360B00E998C6 /* LoadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,8 @@
 		0D04D8AA2A79F72300E998C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0D04D8D22A7A22DB00E998C6 /* Components */,
+				0D04D8D12A7A22A600E998C6 /* Views */,
 				0D04D8982A79F59400E998C6 /* ContentView.swift */,
 			);
 			path = View;
@@ -138,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				0D04D8CB2A7A10FA00E998C6 /* ConfigError.swift */,
+				0D04D8D92A7A275100E998C6 /* ColorExt.swift */,
+				0D04D8DD2A7A360B00E998C6 /* LoadingModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -168,6 +180,22 @@
 				0D04D8C42A7A0B3200E998C6 /* Config.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D04D8D12A7A22A600E998C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D04D8D32A7A234100E998C6 /* UsersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D04D8D22A7A22DB00E998C6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0D04D8D72A7A24D600E998C6 /* CardUserView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,10 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D04D8CC2A7A10FA00E998C6 /* ConfigError.swift in Sources */,
+				0D04D8DA2A7A275100E998C6 /* ColorExt.swift in Sources */,
 				0D04D8CE2A7A169F00E998C6 /* UsersViewModel.swift in Sources */,
 				0D04D8A32A79F59500E998C6 /* Users.xcdatamodeld in Sources */,
 				0D04D8C82A7A0D6B00E998C6 /* ConfigManager.swift in Sources */,
 				0D04D8C12A7A076200E998C6 /* PostModel.swift in Sources */,
+				0D04D8D42A7A234100E998C6 /* UsersView.swift in Sources */,
+				0D04D8D82A7A24D600E998C6 /* CardUserView.swift in Sources */,
 				0D04D8A02A79F59500E998C6 /* Persistence.swift in Sources */,
 				0D04D8D02A7A16B500E998C6 /* PostsViewModel.swift in Sources */,
 				0D04D8BA2A79FF9F00E998C6 /* PostsAPI.swift in Sources */,
@@ -263,6 +294,7 @@
 				0D04D8B62A79FDB400E998C6 /* UsersAPIService.swift in Sources */,
 				0D04D8BF2A7A075800E998C6 /* UserModel.swift in Sources */,
 				0D04D8972A79F59400E998C6 /* UsersApp.swift in Sources */,
+				0D04D8DE2A7A360B00E998C6 /* LoadingModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

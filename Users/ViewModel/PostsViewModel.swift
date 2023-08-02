@@ -9,7 +9,7 @@ import Foundation
 
 class PostsViewModel: ObservableObject {
     @Published var posts: [PostModel] = []
-    @Published var showLoading = false
+    @Published var loading = false
     
     private let postsNetwork: PostsAPI
     
@@ -25,22 +25,22 @@ class PostsViewModel: ObservableObject {
     }
     
     func getPosts() {
-        showLoading = true
+        loading = true
         posts = []
         
         postsNetwork.getPosts() { response in
-            self.loading()
+            self.toggleLoading()
             self.posts.append(contentsOf: response)
         } failure: { error in
-            self.loading()
+            self.toggleLoading()
         }
     }
     
-    private func loading(){
+    private func toggleLoading(){
         let seconds = DispatchTimeInterval.seconds(2)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            self.showLoading.toggle()
+            self.loading.toggle()
         }
     }
 }
