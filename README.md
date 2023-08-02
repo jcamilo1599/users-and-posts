@@ -9,7 +9,3 @@ La aplicación obtiene una lista de usuarios y sus publicaciones desde el api `h
 - Para la parte gráfica (View) se utilizo solo SwiftUI.
 - Utilice el patrón MVVM.
 - El "property list" donde se configura la ruta para los servicios esta en `Users/Models/Resources/Config.plist`
-
-## Demostración
-
-![Image](image-demo.gif)
