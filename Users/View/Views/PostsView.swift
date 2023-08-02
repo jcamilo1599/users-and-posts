@@ -19,18 +19,28 @@ struct PostsView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 30) {
-                buildBody()
-                    .padding(.horizontal, 20)
+        VStack {
+            CardUserView(user: user, viewPosts: false)
+                .padding()
+            
+            Divider()
+            
+            ScrollView {
+                VStack(spacing: 30) {
+                    buildBody()
+                        .padding(.horizontal, 20)
+                }
+                .padding(.top, 10)
             }
+            .padding(.top)
+            .shadow(radius: 2)
+            .navigationTitle("Publicaciones")
+            .modifier(LoadingModifier(show: $viewModel.loading))
+            .navigationViewStyle(DoubleColumnNavigationViewStyle())
+            .accentColor(.orange)
+            .onAppear() {
+                viewModel.getPosts()
         }
-        .navigationTitle("Posts de \(user.name)")
-        .modifier(LoadingModifier(show: $viewModel.loading))
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
-        .accentColor(.orange)
-        .onAppear() {
-            viewModel.getPosts()
         }
     }
     

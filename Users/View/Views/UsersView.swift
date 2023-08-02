@@ -49,7 +49,7 @@ struct UsersView: View {
     }
     
     private func buildFilteredUsers() -> some View {
-        ForEach(viewModel.filteredUsers, id: \.id) { CardUserView(user: $0) }
+        ForEach(viewModel.filteredUsers, id: \.id) { CardUserView(user: $0, viewPosts: true) }
     }
 }
 

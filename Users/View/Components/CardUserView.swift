@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardUserView: View {
     var user: UserModel
+    var viewPosts: Bool
     
     var body: some View {
         VStack(alignment:.leading) {
@@ -43,13 +44,15 @@ struct CardUserView: View {
             HStack {
                 Spacer()
                 
-                NavigationLink(
-                    destination: PostsView(user: user),
-                    label: {
-                        Text("VER PUBLICACIONES")
-                            .foregroundColor(.darkGreen)
-                            .padding(.vertical)
-                    })
+                if viewPosts {
+                    NavigationLink(
+                        destination: PostsView(user: user),
+                        label: {
+                            Text("VER PUBLICACIONES")
+                                .foregroundColor(.darkGreen)
+                                .padding(.vertical)
+                        })
+                }
             }
         }
         .padding()
@@ -62,12 +65,15 @@ struct CardUserView: View {
 struct CardUserView_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            CardUserView(user: UserModel(
-                id: 0,
-                name: "Juan Camilo",
-                email: "jmarin1599@gmail.com",
-                phone: "3005190365"
-            ))
+            CardUserView(
+                user: UserModel(
+                    id: 0,
+                    name: "Juan Camilo",
+                    email: "jmarin1599@gmail.com",
+                    phone: "3005190365"
+                ),
+                viewPosts: true
+            )
         }
     }
 }
