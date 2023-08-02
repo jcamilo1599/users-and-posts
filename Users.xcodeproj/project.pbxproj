@@ -33,6 +33,7 @@
 		0D04D8DE2A7A360B00E998C6 /* LoadingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8DD2A7A360B00E998C6 /* LoadingModifier.swift */; };
 		0D04D8E02A7A3ECB00E998C6 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8DF2A7A3ECB00E998C6 /* PostsView.swift */; };
 		0D04D8E22A7A3F3C00E998C6 /* NoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8E12A7A3F3C00E998C6 /* NoInfoView.swift */; };
+		0D04D8E42A7AED0000E998C6 /* CardPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D04D8E32A7AED0000E998C6 /* CardPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		0D04D8DD2A7A360B00E998C6 /* LoadingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModifier.swift; sourceTree = "<group>"; };
 		0D04D8DF2A7A3ECB00E998C6 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		0D04D8E12A7A3F3C00E998C6 /* NoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfoView.swift; sourceTree = "<group>"; };
+		0D04D8E32A7AED0000E998C6 /* CardPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				0D04D8D72A7A24D600E998C6 /* CardUserView.swift */,
+				0D04D8E32A7AED0000E998C6 /* CardPostView.swift */,
 				0D04D8E12A7A3F3C00E998C6 /* NoInfoView.swift */,
 			);
 			path = Components;
@@ -290,6 +293,7 @@
 				0D04D8C82A7A0D6B00E998C6 /* ConfigManager.swift in Sources */,
 				0D04D8C12A7A076200E998C6 /* PostModel.swift in Sources */,
 				0D04D8D42A7A234100E998C6 /* UsersView.swift in Sources */,
+				0D04D8E42A7AED0000E998C6 /* CardPostView.swift in Sources */,
 				0D04D8D82A7A24D600E998C6 /* CardUserView.swift in Sources */,
 				0D04D8A02A79F59500E998C6 /* Persistence.swift in Sources */,
 				0D04D8D02A7A16B500E998C6 /* PostsViewModel.swift in Sources */,

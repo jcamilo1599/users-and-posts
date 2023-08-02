@@ -37,7 +37,7 @@ class PostsViewModel: ObservableObject {
     }
     
     private func toggleLoading(){
-        let seconds = DispatchTimeInterval.seconds(2)
+        let seconds = DispatchTimeInterval.seconds(1)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.loading.toggle()

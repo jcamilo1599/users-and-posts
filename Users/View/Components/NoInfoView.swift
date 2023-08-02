@@ -9,14 +9,18 @@ import SwiftUI
 
 struct NoInfoView: View {
     var body: some View {
-        Text("No se encontró información")
-            .padding()
-            .background(Color.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(.gray, lineWidth: 1)
-            )
-            .padding()
+        GeometryReader { proxy in
+            let width = proxy.size.width - 32
+            
+            Text("No se encontró información")
+                .frame(width: width)
+                .padding(.horizontal, 16)
+                .padding(.vertical)
+                .background(.white)
+                .cornerRadius(16)
+                .shadow(radius: 2)
+                .padding(.vertical)
+        }
     }
 }
 
