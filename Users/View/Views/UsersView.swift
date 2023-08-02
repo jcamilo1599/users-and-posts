@@ -15,13 +15,17 @@ struct UsersView: View {
     
     var body: some View {
         NavigationView {
-            List { buildBody() }
-                .listStyle(InsetGroupedListStyle())
-                .searchable(text: $searchText, prompt: Text("Buscar usuario")) { buildFilteredUsers() }
-                .navigationTitle("Prueba de Ingreso")
-                .onChange(of: searchText) { _ in
-                    viewModel.filterUsers(search: searchText)
+            ScrollView {
+                VStack(spacing: 30) {
+                    buildBody()
+                        .padding(.horizontal, 20)
                 }
+            }
+            .searchable(text: $searchText, prompt: Text("Buscar usuario")) { buildFilteredUsers() }
+            .navigationTitle("Prueba de Ingreso")
+            .onChange(of: searchText) { _ in
+                viewModel.filterUsers(search: searchText)
+            }
         }
         .modifier(LoadingModifier(show: $viewModel.loading))
         .navigationViewStyle(DoubleColumnNavigationViewStyle())
@@ -31,7 +35,7 @@ struct UsersView: View {
     @ViewBuilder
     private func buildBody() -> some View {
         if viewModel.filteredUsers.isEmpty {
-            //NoInfoView()
+            NoInfoView()
         } else {
             buildFilteredUsers()
         }
