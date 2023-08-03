@@ -20,4 +20,4 @@ La aplicación obtiene una lista de usuarios y sus publicaciones desde el api `h
 
 ## Puebas unitarias y funcionales
 
-![Test](test.png)
+![Test](tests.png)
