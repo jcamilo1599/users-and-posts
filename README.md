@@ -11,6 +11,7 @@ La aplicación obtiene una lista de usuarios y sus publicaciones desde el api `h
 - El "property list" donde se configura la ruta para los servicios esta en `Users/Models/Resources/Config.plist`
 - Pruebas unitarias
 - Pruebas funcionales
+- Modo claro y modo oscuro
 
 ## Demostración
 
