@@ -11,16 +11,16 @@ class PostsViewModel: ObservableObject {
     @Published var posts: [PostModel] = []
     @Published var loading = false
     
-    private let postsNetwork: PostsAPI
+    private let postsAPI: PostsAPI
     
     init(
-        postsNetwork: PostsAPI = PostsAPIService(userId: nil),
+        postsAPI: PostsAPI = PostsAPIService(userId: nil),
         userId: Int32?
     ) {
         if userId != nil {
-            self.postsNetwork = PostsAPIService(userId: userId)
+            self.postsAPI = PostsAPIService(userId: userId)
         } else {
-            self.postsNetwork = postsNetwork
+            self.postsAPI = postsAPI
         }
     }
     
@@ -28,7 +28,7 @@ class PostsViewModel: ObservableObject {
         loading = true
         posts = []
         
-        postsNetwork.getPosts() { response in
+        postsAPI.getPosts() { response in
             self.toggleLoading()
             self.posts.append(contentsOf: response)
         } failure: { error in

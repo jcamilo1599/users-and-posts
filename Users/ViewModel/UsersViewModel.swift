@@ -13,10 +13,10 @@ class UsersViewModel: ObservableObject {
     @Published var filteredUsers: [UserModel] = []
     @Published var loading = false
     
-    private let usersNetwork: UsersAPI
+    private let usersAPI: UsersAPI
     
-    init(usersNetwork: UsersAPI = UsersAPIService()) {
-        self.usersNetwork = usersNetwork
+    init(usersAPI: UsersAPI = UsersAPIService()) {
+        self.usersAPI = usersAPI
     }
     
     func getUsers(_ context: NSManagedObjectContext) {
@@ -25,7 +25,7 @@ class UsersViewModel: ObservableObject {
             users = []
             filteredUsers = []
             
-            usersNetwork.getUsers { response in
+            usersAPI.getUsers { response in
                 self.toggleLoading()
                 self.users.append(contentsOf: response)
                 self.filteredUsers.append(contentsOf: response)
