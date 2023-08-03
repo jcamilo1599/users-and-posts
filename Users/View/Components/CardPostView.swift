@@ -27,7 +27,7 @@ struct CardPostView: View {
                 Button(action: {}) {
                     Image(systemName: "square.and.arrow.up")
                         .font(.system(size: 20))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("bgColor"))
                         .padding(16)
                         .background(Color.darkGreen)
                         .clipShape(Circle())
@@ -35,7 +35,7 @@ struct CardPostView: View {
             }
         }
         .padding()
-        .background(.white)
+        .background(Color("bgColor"))
         .cornerRadius(16)
         .shadow(radius: 2)
     }

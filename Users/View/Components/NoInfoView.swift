@@ -16,7 +16,7 @@ struct NoInfoView: View {
                 .frame(width: width)
                 .padding(.horizontal, 16)
                 .padding(.vertical)
-                .background(.white)
+                .background(Color("bgColor"))
                 .cornerRadius(16)
                 .shadow(radius: 2)
                 .padding(.vertical)

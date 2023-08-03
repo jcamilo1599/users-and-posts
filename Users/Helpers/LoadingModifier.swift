@@ -19,7 +19,7 @@ struct LoadingModifier: ViewModifier {
                         .controlSize(.large)
                 }
                 .frame(width: 160, height: 160)
-                .background(Color.white)
+                .background(Color("bgColor"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
             }

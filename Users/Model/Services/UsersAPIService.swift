@@ -18,7 +18,7 @@ class UsersAPIService: UsersAPI {
     ) {
         do {
             let baseURL = try ConfigManager.shared.value(for: key) as? String
-            var serviceURL = baseURL! + path
+            let serviceURL = baseURL! + path
             
             AF.request(serviceURL, method: .get).validate(statusCode: 200...299).responseDecodable(of: [UserModel].self) { response in
                 if let users = response.value {

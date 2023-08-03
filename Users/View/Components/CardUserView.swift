@@ -56,7 +56,7 @@ struct CardUserView: View {
             }
         }
         .padding()
-        .background(.white)
+        .background(Color("bgColor"))
         .cornerRadius(16)
         .shadow(radius: 2)
     }
