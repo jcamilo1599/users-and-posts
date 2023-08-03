@@ -1,4 +1,4 @@
-# Usuarios
+# Usuarios & Publicaciones
 
 La aplicación obtiene una lista de usuarios y sus publicaciones desde el api `https://jsonplaceholder.typicode.com`.
 
